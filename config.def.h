@@ -20,9 +20,11 @@ static char selbgcolor[]  = "#005577";
 static char selhighfgcolor[]  = "#ffe585";
 static char normhighfgcolor[]  = "#51afef";
 static char outfgcolor[]  = "#000000";
+static char bordercolor[]  = "#bbbbbb";
 static char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { normfgcolor, normbgcolor },
+	[SchemeBorder] = { bordercolor, bordercolor },
 	[SchemeSel]  = { selfgcolor,  normbgcolor  },
 	[SchemeSelHighlight] = { selhighfgcolor, normbgcolor },
 	[SchemeNormHighlight] = { normhighfgcolor, normbgcolor },
