@@ -17,13 +17,16 @@ static char normfgcolor[] = "#bbbbbb";
 static char normbgcolor[] = "#222222";
 static char selfgcolor[]  = "#eeeeee";
 static char selbgcolor[]  = "#005577";
+static char selhighfgcolor[]  = "#ffe585";
+static char normhighfgcolor[]  = "#51afef";
+static char outfgcolor[]  = "#000000";
 static char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { normfgcolor, normbgcolor },
-	[SchemeSel]  = { selfgcolor,  selbgcolor  },
-	[SchemeSelHighlight] = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
-	[SchemeOut]  = { "#000000",   "#00ffff" },
+	[SchemeSel]  = { selfgcolor,  normbgcolor  },
+	[SchemeSelHighlight] = { selhighfgcolor, normbgcolor },
+	[SchemeNormHighlight] = { normhighfgcolor, normbgcolor },
+	[SchemeOut]  = { outfgcolor,   normbgcolor },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
@@ -46,9 +49,10 @@ static unsigned int border_width = 0;
  */
 ResourcePref resources[] = {
 	{ "font",        STRING, &font },
-	{ "normfgcolor", STRING, &normfgcolor },
-	{ "normbgcolor", STRING, &normbgcolor },
-	{ "selfgcolor",  STRING, &selfgcolor },
-	{ "selbgcolor",  STRING, &selbgcolor },
+	{ "foreground", STRING, &normfgcolor },
+	{ "background", STRING, &normbgcolor },
+	{ "color4",  STRING, &selfgcolor },
+	{ "color3",  STRING, &selhighfgcolor },
+	{ "color2",  STRING, &normhighfgcolor },
 	{ "prompt",      STRING, &prompt },
 };
