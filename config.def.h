@@ -51,8 +51,8 @@ ResourcePref resources[] = {
 	{ "font",        STRING, &font },
 	{ "foreground", STRING, &normfgcolor },
 	{ "background", STRING, &normbgcolor },
-	{ "color4",  STRING, &selfgcolor },
+	{ "color2",  STRING, &selfgcolor },
 	{ "color3",  STRING, &selhighfgcolor },
-	{ "color2",  STRING, &normhighfgcolor },
+	{ "color4",  STRING, &normhighfgcolor },
 	{ "prompt",      STRING, &prompt },
 };
