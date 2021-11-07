@@ -160,8 +160,7 @@ drawhighlights(struct item *item, int x, int y, int maxw)
 	                   ? SchemeSelHighlight
 	                   : SchemeNormHighlight]);
 	for (i = 0, highlight = item->text; *highlight && text[i];) {
-                //dirty fix for highlighting upercase, should be check with -i parameter
-		if (tolower(*highlight) == tolower(text[i])) {
+                if (!fstrncmp(&(*highlight), &text[i], 1)) {
 			/* get indentation */
 			c = *highlight;
 			*highlight = '\0';
